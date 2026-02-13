@@ -1,0 +1,7 @@
+[project]
+name = "AI-Tech-Project"
+version = "1.0.0"
+description = "This project is for the AI Tech Class"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
