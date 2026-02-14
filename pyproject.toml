@@ -4,4 +4,13 @@ version = "1.0.0"
 description = "This project is for the AI Tech Class"
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "ipywidgets>=8.1.8",
+    "librosa>=0.11.0",
+    "matplotlib>=3.10.8",
+    "numpy>=2.3.5",
+    "pandas>=3.0.0",
+    "resampy>=0.4.3",
+    "scikit-learn>=1.8.0",
+    "tqdm>=4.67.3",
+]
