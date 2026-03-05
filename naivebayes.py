@@ -28,9 +28,12 @@ class NaiveBayes():
 
         for c in self.classes:
             idx = np.where(self.label == c)
-            self.means[c] = np.mean(self.sample[idx])
-            self.sds[c] = np.std(self.sample[idx])
+            self.means[c] = np.mean(self.sample[idx],axis=0)
+            self.sds[c] = np.std(self.sample[idx],axis=0)
             self.priors[c] = len(idx[0]) / len(self.label)
+        
+        self.theta_ = np.array([self.means[c] for c in self.classes])
+        self.var_ = np.array([self.sds[c]**2 for c in self.classes])
 
     def _norm_pdf(self, x, mean, sd):
         d = -((x - mean)**2 / (2*sd**2))
